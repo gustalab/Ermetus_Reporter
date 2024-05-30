@@ -44,6 +44,10 @@ library(rhandsontable)
 
 # source("../app_bilirkisi/hesaplamalar.R")
 
+#
+
+Sys.setlocale(locale = "Turkish")
+
 # Functions & Tables----
 
 kaza_t <- as.Date("2018-01-01")
