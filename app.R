@@ -967,68 +967,68 @@ ui <- fluidPage(
                         
    # SONUÇLAR DIV ----                     
                         
-                        div(
-                          id = "sonuclar",
-                          
-                          column(
-                            width = 3,
-                            wellPanel(
-                              p(tags$b("Hesaplama Bilgileri", style = "font-weight: bold; color: red;")),
-                              textOutput("yontem"),
-                              conditionalPanel(
-                                condition = "input.yontem == 'Progresif Rant'",
-                                textOutput("tablo1")
-                              ),
-                              conditionalPanel(
-                                condition = "input.yontem == 'Aktüeryal'",
-                                textOutput("tablo2")
-                              ),
-                              
-                              conditionalPanel(
-                                condition = "input.yontem == 'Progresif Rant'",
-                                textOutput("standartfaiz")
-                              ),
-                              
-                              conditionalPanel(
-                                condition = "input.yontem == 'Aktüeryal'",
-                                textOutput("teknikfaiz")
-                              ),
-                              
-                              
-                              br(),
-                              p(tags$b("Genel Bilgiler", style = "font-weight: bold; color: red;")),
-                              textOutput("dosya_no"),
-                              textOutput("isim"),
-                              textOutput("cinsiyet"),
-                              textOutput("dogumtarihi"),
-                              textOutput("kazatarihi"),
-                              textOutput("maluliyetoranı"),
-                              textOutput("kusuroranı"),
-                              textOutput("gecicimaluliyet"),
-                              textOutput("bakicisure"),
-
-                              style = "background: #fff"
-                            )
-                            
-                          ),
-                          
-                          column(
-                            width = 3,
-                            dataTableOutput('table')
-                          ),
-                          
-                          column(
-                            width = 3,
-                            dataTableOutput('table3'),
-                            downloadButton("dl", "Download Table")
-                          ),
-                          column(
-                            width = 2,
-                            dataTableOutput('table4'),
-                            downloadButton("dl2", "Download Table")
-                          )
-                          
-                        ) %>% hidden(), # textoutput div end
+                        # div(
+                        #   id = "sonuclar",
+                        #   
+                        #   column(
+                        #     width = 3,
+                        #     wellPanel(
+                        #       p(tags$b("Hesaplama Bilgileri", style = "font-weight: bold; color: red;")),
+                        #       textOutput("yontem"),
+                        #       conditionalPanel(
+                        #         condition = "input.yontem == 'Progresif Rant'",
+                        #         textOutput("tablo1")
+                        #       ),
+                        #       conditionalPanel(
+                        #         condition = "input.yontem == 'Aktüeryal'",
+                        #         textOutput("tablo2")
+                        #       ),
+                        #       
+                        #       conditionalPanel(
+                        #         condition = "input.yontem == 'Progresif Rant'",
+                        #         textOutput("standartfaiz")
+                        #       ),
+                        #       
+                        #       conditionalPanel(
+                        #         condition = "input.yontem == 'Aktüeryal'",
+                        #         textOutput("teknikfaiz")
+                        #       ),
+                        #       
+                        #       
+                        #       br(),
+                        #       p(tags$b("Genel Bilgiler", style = "font-weight: bold; color: red;")),
+                        #       textOutput("dosya_no"),
+                        #       textOutput("isim"),
+                        #       textOutput("cinsiyet"),
+                        #       textOutput("dogumtarihi"),
+                        #       textOutput("kazatarihi"),
+                        #       textOutput("maluliyetoranı"),
+                        #       textOutput("kusuroranı"),
+                        #       textOutput("gecicimaluliyet"),
+                        #       textOutput("bakicisure"),
+                        # 
+                        #       style = "background: #fff"
+                        #     )
+                        #     
+                        #   ),
+                        #   
+                        #   column(
+                        #     width = 3,
+                        #     dataTableOutput('table')
+                        #   ),
+                        #   
+                        #   column(
+                        #     width = 3,
+                        #     dataTableOutput('table3'),
+                        #     downloadButton("dl", "Download Table")
+                        #   ),
+                        #   column(
+                        #     width = 2,
+                        #     dataTableOutput('table4'),
+                        #     downloadButton("dl2", "Download Table")
+                        #   )
+                        #   
+                        # ) %>% hidden(), # textoutput div end
                         
                         div(
                           column(
