@@ -44,9 +44,10 @@ library(rhandsontable)
 
 # source("../app_bilirkisi/hesaplamalar.R")
 
-#
+# test
 
 Sys.setlocale(locale = "Turkish")
+ 
 
 # Functions & Tables----
 
