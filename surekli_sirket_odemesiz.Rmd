@@ -21,17 +21,17 @@ output:
   #   fig.align: "left"
     
 params:
-  PMaluliyet_Oranı: NULL
-  PKusur_Oranı: NULL
+  PMaluliyet_Orani: NULL
+  PKusur_Orani: NULL
   PKaza_Tarihi: NULL
   PDogum_Tarihi: NULL
   PDosya_No: NULL
   PAd_Soyad: NULL
   PCinsiyet: NULL
   PGeçici_Maluliyet_Sure: NULL
-  PKısmi_Odeme_Sayısı: NULL
-  PKısmi_Odeme_Tarihi_1: NULL
-  PKısmi_Odeme_Tutarı_1: NULL
+  PKismi_Odeme_Sayisi: NULL
+  PKismi_Odeme_Tarihi_1: NULL
+  PKismi_Odeme_Tutari_1: NULL
   # PKısmi_Odeme_Tarihi_2: NULL
   # PKısmi_Odeme_Tutarı_2: NULL
   PGelir: NULL
@@ -54,8 +54,6 @@ knitr::opts_chunk$set(
 
 
 ```{r echo=FALSE}
-
-
 
   # Load Libraries & Files ----
 
@@ -107,12 +105,12 @@ Teminat_Limit_Tablosu <- read_excel("../Ermetus_Reporter/data/Teminat_Limit_Tabl
   Gelir_Durumu <- params$PGelir
   # Gelir_Durumu <- "Bekar"
   Kaza_Tarihi <- as.Date(params$PKaza_Tarihi)
-  Maluliyet_Oranı <- params$PMaluliyet_Oranı
-  Kusur_Oranı <- params$PKusur_Oranı
+  Maluliyet_Oranı <- params$PMaluliyet_Orani
+  Kusur_Oranı <- params$PKusur_Orani
   Gecici_Maluliyet_sure <- params$PGeçici_Maluliyet_Sure
-  Kısmi_Odeme_Sayısı <- params$PKısmi_Odeme_Sayısı
-  Kısmi_Odeme_Tarihi_1 <- as.Date(params$PKısmi_Odeme_Tarihi_1)
-  Kısmi_Odeme_Tutarı_1 <- params$PKısmi_Odeme_Tutarı_1
+  Kısmi_Odeme_Sayısı <- params$PKismi_Odeme_Sayısı
+  Kısmi_Odeme_Tarihi_1 <- as.Date(params$PKismi_Odeme_Tarihi_1)
+  Kısmi_Odeme_Tutarı_1 <- params$PKismi_Odeme_Tutari_1
   # Kısmi_Odeme_Tarihi_2 <- as.Date(params$PKısmi_Odeme_Tarihi_2)
   # Kısmi_Odeme_Tutarı_2 <- params$PKısmi_Odeme_Tutarı_2
   Yasam_Tablosu <- params$PYasam_Tablosu
