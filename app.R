@@ -176,7 +176,7 @@ ui <-  tagList(
   
   #h2("Şube Kapasite Yönetimi"),
   
-  shinyauthr::loginUI(id = "login_3",title = "BCM App", error_message = "Wrong username or password", 
+  shinyauthr::loginUI(id = "login_3",title = "SİGORTACILIK HESAPLAMA", error_message = "Wrong username or password", 
                       user_title = "Username", pass_title = "Password", login_title = "Enter" ),
   
   uiOutput(outputId = "web_page")
