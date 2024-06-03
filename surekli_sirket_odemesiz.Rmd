@@ -53,7 +53,16 @@ knitr::opts_chunk$set(
 ```
 
 
+```{r echo=FALSE, include=FALSE}
+
+
+Sys.setlocale(locale = "Turkish")
+
+```
+
+
 ```{r echo=FALSE}
+
 
   # Load Libraries & Files ----
 
@@ -706,7 +715,9 @@ knitr::kable(son_hesaplama_tablosu2 , caption = "Sürekli Maluliyet Tazminat Tab
 knitr::kable(son_hesaplama_tablosu1 , caption = "Sürekli Maluliyet Tazminat Tablosu")
 }
 
-str_glue("* Nihai olarak hesaplanan Toplam Bakiye Sürekli Maluliyet Tazminat tutarı {bakiye_tazminat} TL olarak hesaplanmıştır.")
+bakiye_tazminat_son <- formattable::currency(bakiye_tazminat, digits = 2, format = "f", big.mark = ".",decimal.mark = ",",  symbol = "") 
+
+str_glue("* Nihai olarak hesaplanan Toplam Bakiye Sürekli Maluliyet Tazminat tutarı {bakiye_tazminat_son} TL olarak hesaplanmıştır.")
 
 
 # str_glue("* Bilinmeyen Dönemde Geçici İş Göremezlik Tazminatı {gecici_donem_tazminat} TL olarak hesaplanmıştır.")
